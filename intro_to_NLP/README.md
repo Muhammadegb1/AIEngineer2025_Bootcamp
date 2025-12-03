@@ -2,24 +2,6 @@
 
 This repository contains **learning exercises** from the **AI Engineer Course 2025: Complete AI Engineer Bootcamp** on Udemy.
 The exercises are designed to help understand **Python for AI, NLP, and foundational AI concepts**.
-
----
-
-## Repository Structure
-
-```
-/exercises
-    ├── tokenization.py            # Exercises on text tokenization and splitting
-    ├── stopwords_and_lemmatization.py  # Removing stopwords and lemmatization exercises
-    ├── sentiment_analysis.py      # Using TextBlob, VADER, and Transformers for sentiment
-    ├── ner_examples.py            # Named Entity Recognition (NER) examples
-    ├── text_classification.py     # Simple text classification exercises
-    ├── word2vec_gensim.py         # Word embeddings and similarity with Gensim
-    ├── visualization.ipynb        # Data and text visualization exercises
-    └── utils.py                   # Helper functions for NLP tasks
-README.md
-```
-
 ---
 
 ## What I Learned

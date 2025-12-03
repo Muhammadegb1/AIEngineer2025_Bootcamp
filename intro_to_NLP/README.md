@@ -5,41 +5,6 @@ The exercises are designed to help understand **Python for AI, NLP, and foundati
 
 ---
 
-## Getting Started
-
-### Clone the Repository
-
-First, clone this repository to your local machine:
-
-```bash
-git clone https://github.com/your-username/ai-engineer-nlp.git
-cd ai-engineer-nlp
-```
-
-### Conda Environment
-
-Using a virtual environment is recommended to manage packages without affecting other projects.
-
-Create and activate the environment:
-
-```bash
-conda create --name nlp_course_env python=3.11
-conda activate nlp_course_env
-```
-
-Install the required packages:
-
-```bash
-pip install nltk==3.9.1 pandas==2.2.3 matplotlib==3.10.0 spacy==3.8.3 textblob==0.18.0.post0 vaderSentiment==3.3.2 transformers==4.47.1 scikit-learn==1.6.0 gensim==4.3.3 seaborn==0.13.2 torch==2.5.1 ipywidgets==8.1.5
-python -m spacy download en_core_web_sm
-pip install ipykernel jupyterlab notebook
-python -m ipykernel install --user --name=nlp_course_env
-```
-
-Now you can run Jupyter Notebook or JupyterLab to explore the exercises.
-
----
-
 ## Repository Structure
 
 ```
@@ -80,6 +45,64 @@ These exercises helped me understand and practice:
 * **Data Visualization**:
 
   * Visualizing token counts, sentiment distributions, and named entities with Matplotlib and Seaborn
+
+---
+## Topics Learned / Key Concepts
+
+- **Lowercasing**: Converting all text to lowercase to standardize data for NLP tasks.  
+- **StopWords**: Removing common words (like "the", "and") that do not add meaning to text analysis.  
+- **Regular Expressions**: Using patterns to find, match, or clean text efficiently.  
+- **Tokenizing Text**:  
+  - **Sentence Tokenization**: Splitting text into sentences.  
+  - **Word Tokenization**: Splitting sentences into individual words or tokens.  
+- **Stemming (PorterStemmer)**: Reducing words to their root form (e.g., "running" → "run").  
+- **Lemmatization (WordNetLemmatizer)**: Reducing words to their base or dictionary form while considering context.  
+- **N-grams**: Sequences of N consecutive words used for text analysis and feature extraction.  
+- **POS Tagging (spaCy, NLP)**: Identifying parts of speech (noun, verb, adjective, etc.) in text.  
+- **NER (Named Entity Recognition)**: Detecting entities like names, locations, organizations in text.  
+- **Rule-Based Sentiment**:  
+  - **TextBlob**: Lexicon-based approach for polarity and subjectivity.  
+  - **VADER**: Sentiment analysis optimized for social media text.  
+- **Pre-trained Transformer Models (pipeline)**: Using Hugging Face Transformers for advanced NLP tasks like sentiment analysis and text classification.  
+- **Bag of Words (CountVectorizer)**: Representing text as a matrix of token counts.  
+- **TF-IDF (TfidfVectorizer)**: Weighting words by importance, reducing the impact of common words.  
+- **LDA (Latent Dirichlet Allocation, gensim)**: Topic modeling to discover hidden topics in text.  
+- **LSA (Latent Semantic Analysis)**: Dimensionality reduction technique to capture semantic meaning of words.  
+- **Custom Classifier (Combined)**: Building a custom text classifier combining multiple preprocessing and modeling techniques.  
+
+---
+## Getting Started
+
+### Clone the Repository
+
+First, clone this repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/ai-engineer-nlp.git
+cd ai-engineer-nlp
+```
+
+### Conda Environment
+
+Using a virtual environment is recommended to manage packages without affecting other projects.
+
+Create and activate the environment:
+
+```bash
+conda create --name nlp_course_env python=3.11
+conda activate nlp_course_env
+```
+
+Install the required packages:
+
+```bash
+pip install nltk==3.9.1 pandas==2.2.3 matplotlib==3.10.0 spacy==3.8.3 textblob==0.18.0.post0 vaderSentiment==3.3.2 transformers==4.47.1 scikit-learn==1.6.0 gensim==4.3.3 seaborn==0.13.2 torch==2.5.1 ipywidgets==8.1.5
+python -m spacy download en_core_web_sm
+pip install ipykernel jupyterlab notebook
+python -m ipykernel install --user --name=nlp_course_env
+```
+
+Now you can run Jupyter Notebook or JupyterLab to explore the exercises.
 
 ---
 

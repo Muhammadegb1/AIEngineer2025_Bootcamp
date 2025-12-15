@@ -1,6 +1,6 @@
-# AI Engineering with Python – Udemy Course
+# The AI Engineer Course 2025: Complete AI Engineer Bootcamp
 
-This repository summarizes my learning journey from the Udemy course on AI Engineering with Python. The course provides a comprehensive roadmap to become an AI Engineer, combining theory with practical projects.
+This repository summarizes my learning journey from **The AI Engineer Course 2025: Complete AI Engineer Bootcamp** on Udemy. The course provides a comprehensive roadmap to become an AI Engineer, combining theory with practical projects.
 
 ---
 
@@ -29,6 +29,4 @@ These skills prepare you for a career as an AI Engineer and enable you to implem
 ---
 
 ## Conclusion
-This course equips you with the knowledge and experience needed to excel in AI engineering and effectively apply AI to real-world problems.  
-
----
+This course equips you with the knowledge and experience needed to excel in AI engineering and effectively apply AI to real-world problems.

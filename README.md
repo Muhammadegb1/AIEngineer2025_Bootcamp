@@ -27,6 +27,3 @@ These skills prepare you for a career as an AI Engineer and enable you to implem
 - **AI Engineering Projects:** Hands-on lessons for designing and building AI applications, including a data scientist interview simulator with tools like OpenAI and Streamlit.  
 
 ---
-
-## Conclusion
-This course equips you with the knowledge and experience needed to excel in AI engineering and effectively apply AI to real-world problems.

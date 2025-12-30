@@ -53,5 +53,6 @@ pip install openai==0.28 config==0.5.1 langchain==0.0.297 pydantic==1.10.9 tikto
 
 # Install Jupyter tools
 pip install ipykernel jupyterlab notebook
+python -m ipykernel install --user --name=llms_course_env
 
 # Regi

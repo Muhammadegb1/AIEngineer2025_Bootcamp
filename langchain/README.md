@@ -76,6 +76,7 @@ RAG combines **retrieval from external knowledge sources** with **language model
 - **Generation** – generating responses grounded in retrieved context  
 
 This approach enables **knowledge-enhanced LLM applications** beyond the model’s pretraining data.
+
 ---
 
 ## Getting Started

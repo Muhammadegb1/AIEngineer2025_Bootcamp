@@ -69,3 +69,58 @@ LangGraph allows saving conversation state per **thread_id**, so the chatbot rem
 
 - **Short-term memory** – via `MemorySaver`, stored in memory only, cleared on restart.  
 - **Long-term memory** – via `SQLiteSaver`, stored on disk, survives restarts.
+
+## Getting Started
+
+### Clone the Repository
+
+First, clone this repository to your local machine:
+
+```bash
+git clone https://github.com/Muhammadegb1/AIEngineer2025_Bootcamp.git
+cd langchain
+```
+
+### Conda Environment
+
+Using a virtual environment is recommended to manage packages without affecting other projects.
+
+Create and activate the environment:
+
+```bash
+conda create --name langgraph_env python=3.11.11
+conda activate langgraph_env
+```
+
+Install the required packages:
+
+```bash
+pip install ipykernel jupyterlab notebook
+python -m ipykernel install --user --name=langgraph_env
+
+pip install langchain==0.3.25
+pip install langchain_text_splitters==0.3.8
+pip install langchain_core==0.3.60
+pip install langsmith==0.3.42
+
+pip install langgraph==0.4.8
+pip install langgraph_prebuilt==0.2.2
+pip install langgraph_checkpoint==2.0.26
+pip install langgraph_sdk==0.1.70
+
+pip install langchain_openai==0.3.17
+pip install openai==1.81.0
+pip install langgraph-checkpoint-sqlite
+pip install python-dotenv
+pip install mypy-ipython
+pip install grandalf
+
+
+```
+Environment Variables:
+Create a .env file and define your OpenAI API key:
+```bash
+OPENAI_API_KEY=your_api_key_here
+
+```
+

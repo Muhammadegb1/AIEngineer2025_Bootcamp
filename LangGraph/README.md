@@ -1,6 +1,7 @@
-# LangGraph - Stateful Chatbot with Long-Term Memory
+# LangGraph
 
-This repository demonstrates how to build a **stateful chatbot** using **LangGraph**, with long-term memory, conditional routing, and graph-based logic. The chatbot can remember previous conversations, summarize them, and manage branching flows.
+This repository demonstrates how to build a **stateful chatbot** using **LangGraph**, with conditional routing, and graph-based logic.
+The chatbot can remember previous conversations, summarize them, and manage branching flows.
 
 ---
 
@@ -8,38 +9,9 @@ This repository demonstrates how to build a **stateful chatbot** using **LangGra
 
 A **LangGraph** conversation graph consists of three main components:
 
-### 1. State
-- Holds all conversation information.
-- Passed between nodes so each node can read and update it.
-- Typical fields:
-  - `messages` – the list of all exchanged messages.
-  - `summary` – a condensed summary of the conversation.
-
-### 2. Node
-- Represents a single step in the flow (a function).
-- Receives a `State` and returns an updated `State`.
-- Performs one action: ask a question, provide an answer, or summarize messages.
-
-### 3. Edge
-- Connects nodes.
-- Determines the next node to execute.
-- Can be:
-  - Linear (simple flow)
-  - Conditional using `path_map` or `Literal` (recommended)
-
----
-
-## 🔹 Key Components
-
-- **TypedDict** – defines the structure of the `State`.
-- **StateGraph** – builds the graph structure.
-- **START / END** – marks entry and exit points.
-- **ChatOpenAI** – LLM used as the chatbot.
-- **HumanMessage** – user input.
-- **BaseMessage** – base class for all messages.
-- **Runnable** – functions used as nodes.
-- **Sequence** – type for storing multiple messages.
-- **Literal** – restricts a variable to predefined values only.
+1. **State** – holds all conversation info (`messages`, `summary`) and is passed between nodes.  
+2. **Node** – a function that receives and updates the `State` (e.g., ask question, respond, summarize).  
+3. **Edge** – connects nodes; can be linear or conditional (`path_map` / `Literal`).
 
 ---
 
@@ -72,7 +44,7 @@ state.messages = add_messages(state.messages, new_messages)
 ## 🛠️ Managing Messages Efficiently
 
 ### 1. Trim Messages
-- Keep only the last N messages (e.g., 5) to reduce token usage.
+- keep only the last N messages.
 - Use `RemoveMessage` to delete older messages while keeping the recent context.
 
 ### 2. Summarizing Messages
@@ -81,14 +53,19 @@ state.messages = add_messages(state.messages, new_messages)
 - Maintains long-term context with minimal resources.
 
 ### 💾 Thread-Level Persistence
-- Saves conversation state per `thread_id`.
-- The chatbot remembers context between sessions or page reloads.
-- Implemented via Checkpoints:
-  - Each snapshot includes:
-    - `state` (messages, summary)
-    - `thread_id`
-    - `checkpoint_id`
-    - `step` (node index)
-    - `next_node`
-- Restores conversation from the last snapshot.
+LangGraph allows saving conversation state per **thread_id**, so the chatbot remembers context across sessions or restarts.
 
+- After each node, a **StateSnapshot** is created containing:
+  - `messages`, `summary`
+  - `step` (current node)
+  - `next_node` (next node to run)
+- Snapshots are grouped by thread; each thread represents one continuous conversation.
+- Running the graph again with the same thread_id:
+  1. Retrieves the last checkpoint.
+  2. Uses it as input for the graph.
+  3. Resumes the conversation from where it left off.
+
+**Memory types:**
+
+- **Short-term memory** – via `MemorySaver`, stored in memory only, cleared on restart.  
+- **Long-term memory** – via `SQLiteSaver`, stored on disk, survives restarts.

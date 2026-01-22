@@ -86,47 +86,6 @@ An **index** is the core data structure in Pinecone used to store and search vec
 Upsert operations form the foundation for building scalable semantic search and recommendation systems.
 
 ---
-
-## Getting Started
-
-### Clone the Repository
-
-First, clone this repository to your local machine:
-
-```bash
-git clone https://github.com/Muhammadegb1/AIEngineer2025_Bootcamp.git
-cd langchain
-```
-
-### Conda Environment
-
-Using a virtual environment is recommended to manage packages without affecting other projects.
-
-Create and activate the environment:
-
-```bash
-conda create --name vectorDataBase python
-conda activate vectorDataBase
-```
-
-Install the required packages:
-
-```bash
-pip install python-dotenv ipykernel jupyterlab notebook
-python -m ipykernel install --user --name=vectorDataBase
-
-pip install pinecone
-pip install datasets
-pip install sentence-transformers
-
-```
-Environment Variables:
-Create a .env file and define your OpenAI API key:
-```bash
-OPENAI_API_KEY=your_api_key_here
-```
-
-
 ## 🔎 Semantic Search with Pinecone
 
 ### What is Semantic Search
@@ -151,3 +110,40 @@ Queries are executed using `index.query()` with key parameters:
   - **score** – similarity score between the query and the result.
   - **values** – the vector itself (if `include_values=True`).
 ---
+
+## Getting Started
+
+### Clone the Repository
+
+First, clone this repository to your local machine:
+
+```bash
+git clone https://github.com/Muhammadegb1/AIEngineer2025_Bootcamp.git
+cd vectorDataBase
+```
+
+### Conda Environment
+
+Using a virtual environment is recommended to manage packages without affecting other projects.
+
+Create and activate the environment:
+
+```bash
+conda create --name vectorDataBase python
+conda activate vectorDataBase
+```
+Install the required packages:
+
+```bash
+pip install python-dotenv ipykernel jupyterlab notebook
+python -m ipykernel install --user --name=vectorDataBase
+
+pip install pinecone
+pip install datasets
+pip install sentence-transformers
+```
+Environment Variables:
+Create a .env file and define your Pinecone API key:
+```bash
+PINECONE_API_KEY=your_pinecone_api_key_here
+```

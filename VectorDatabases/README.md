@@ -1,4 +1,4 @@
-# 📚 Vector Database with Pinecone – README
+# 📚 Vector Database with Pinecone
 
 ## 🔍 Overview
 This repository summarizes key concepts and practical workflows related to **Vector Databases**, with a focus on **Pinecone** as a managed cloud-based vector database. The goal is to demonstrate how vector databases enable **semantic search** and power modern AI applications.

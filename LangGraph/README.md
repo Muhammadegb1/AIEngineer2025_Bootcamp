@@ -117,10 +117,9 @@ pip install grandalf
 
 
 ```
-Environment Variables:Create a .env file in the project root and define your Pinecone API key:
-Create a .env file and define your Pinecone API key:
+Environment Variables: 
+Create a .env file and define your OpenAI API key:
 ```bash
-OPENAI_API_KEY=your_pinecone_api_key_here
-
+OPENAI_API_KEY=your_api_key_here
 ```
 

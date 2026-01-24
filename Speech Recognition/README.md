@@ -73,14 +73,16 @@ pip install librosa SpeechRecognition jiwer matplotlib gTTS
 pip install -U openai-whisper
 ```
 
-> **Note:** Whisper requires `ffmpeg` to be installed and available in system PATH.
->           On Windows, you can install FFmpeg using [Chocolatey software](https://chocolatey.org/install)
->           in **Windows PowerShell** - 
-            ```bash
-            choco install ffmpeg
-            ```
-> **Note:** Whisper requires 'PyTorch'. Install it according to your system configuration:
->           [PyTorch installation guide](https://pytorch.org/get-started/locally/)
->           Example for CPU-only: **pip3 install torch torchvision torchaudio**
+**Note:** Whisper requires `ffmpeg` to be installed and available in system PATH.
+           On Windows, you can install FFmpeg using [Chocolatey software](https://chocolatey.org/install)
+           in **Windows PowerShell** - 
+```bash
+choco install ffmpeg
+```
+---
+**Note:** Whisper requires 'PyTorch'. Install it according to your system configuration:
+           [PyTorch installation guide](https://pytorch.org/get-started/locally/)
+           Example for CPU-only: **pip3 install torch torchvision torchaudio**
+           
 ---
 

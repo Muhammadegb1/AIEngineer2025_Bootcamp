@@ -55,6 +55,18 @@ Automates transcription of multiple audio files from a directory and generates b
 ---
 
 ## Dependencies
+### Conda Environment
+
+Using a virtual environment is recommended to manage packages without affecting other projects.
+
+Create and activate the environment:
+
+```bash
+conda create --name speech_env python
+pip install ipykernel jupyterlab notebook
+python -m ipykernel install --user --name speech_env --display-name "Python(speech_env)"
+```
+
 Install all required packages using:
 ```bash
 pip install librosa SpeechRecognition jiwer matplotlib gTTS

@@ -1,30 +1,14 @@
 # Speech Recognition & Audio Processing Project
 
-## Overview
 This project demonstrates a complete speech processing pipeline using Python, combining **audio analysis**, **speech-to-text (ASR)**, **error evaluation**, and **text-to-speech (TTS)**.
 
-The project is divided into **two main scripts**, each with a clear responsibility:
+The project is divided into **two files**, each with a clear responsibility:
 1. Single-audio analysis and comparison of speech recognition techniques.
 2. Batch transcription of multiple audio files and exporting results.
 
 ---
 
-## Project Structure
-```
-project/
-│
-├── audio_analysis_asr.py        # Single audio processing and evaluation
-├── batch_transcription_tts.py  # Directory transcription + CSV + TTS
-├── speech_01.wav               # Example input audio
-├── filtered_speech_01.wav      # Output after pre-emphasis
-├── transcriptions.csv          # Generated transcription results
-├── output.mp3                  # Generated TTS audio
-└── README.md
-```
-
----
-
-## File 1: `audio_analysis_asr.py`
+## File 1: `01 SpeechRecognition`
 
 ### Purpose
 Processes a single speech file and compares different speech recognition approaches while analyzing audio characteristics.
@@ -51,13 +35,13 @@ Processes a single speech file and compares different speech recognition approac
 
 ---
 
-## File 2: `batch_transcription_tts.py`
+## File 2: `02 transcribe_audio_director & Text-to-speech`
 
 ### Purpose
 Automates transcription of multiple audio files from a directory and generates both text and speech outputs.
 
 ### Main Features
-- Load Whisper ASR model
+- Load Whisper ASR-(Automatic Speech Recognition) model
 - Transcribe all `.wav` files in a directory
 - Save transcriptions to a structured CSV file
 - Convert text to speech using Google Text-to-Speech (gTTS)
@@ -73,43 +57,18 @@ Automates transcription of multiple audio files from a directory and generates b
 ## Dependencies
 Install all required packages using:
 ```bash
-pip install numpy matplotlib librosa soundfile speechrecognition jiwer openai-whisper gtts
+pip install librosa SpeechRecognition jiwer matplotlib gTTS
+pip install -U openai-whisper
 ```
 
 > **Note:** Whisper requires `ffmpeg` to be installed and available in system PATH.
-
+            On Windows, you can install FFmpeg using [Chocolatey software](https://chocolatey.org/install)
+            in **Windows PowerShell** - 
+            ```bash
+            choco install ffmpeg
+            ```
+> **Note:** Whisper requires 'PyTorch'. Install it according to your system configuration:
+            [PyTorch installation guide](https://pytorch.org/get-started/locally/)
+            Example for CPU-only: **pip3 install torch torchvision torchaudio**
 ---
-
-## Usage
-
-### Single Audio Analysis
-```bash
-python audio_analysis_asr.py
-```
-
-### Batch Transcription & TTS
-```bash
-python batch_transcription_tts.py
-```
-
----
-
-## Output
-- Visual audio analysis (waveform & spectrogram)
-- Speech-to-text transcriptions
-- WER / CER evaluation metrics
-- CSV file with batch transcriptions
-- Generated MP3 audio from text
-
----
-
-## Notes
-- Designed for experimentation and comparison of ASR techniques
-- Easily extendable to other datasets or Whisper models (`small`, `medium`, `large`)
-
----
-
-## Author
-Muhammad Agbariah
-Computer Science | Speech & Audio Processing
 

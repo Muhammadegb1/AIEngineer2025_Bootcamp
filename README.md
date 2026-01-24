@@ -4,19 +4,6 @@ This repository summarizes my learning journey from **The AI Engineer Course 202
 
 ---
 
-## Key Skills You Will Gain
-- **Core AI Concepts:** Build a solid foundation in Artificial Intelligence principles.  
-- **Python for AI & NLP:** Gain proficiency in Python for AI applications, focusing on Natural Language Processing (NLP).  
-- **Large Language Models (LLMs):** Understand LLMs and their practical applications in real-world projects.  
-- **LangChain:** Learn to develop AI-driven applications using this powerful Python library.  
-- **Hugging Face Tools:** Explore state-of-the-art AI models and tools for NLP and more.  
-- **API Integration:** Connect and interact with foundation models through APIs.  
-- **Transformers & Speech Recognition:** Apply Transformer architectures for advanced tasks like speech-to-text.  
-
-These skills prepare you for a career as an AI Engineer and enable you to implement AI solutions in real-life business scenarios.
-
----
-
 ## Technologies Covered
 - **Python Programming:** Essential for building AI models and applications.  
 - **Natural Language Processing (NLP):** Learn text processing, classification, vectorization, and more.  
